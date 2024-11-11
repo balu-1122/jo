@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Application Submitted!</h1>
+        <p>Your application for the position of <strong>{{ job_title }}</strong> at <strong>{{ company_name }}</strong> has been successfully sent to the recruiter.</p>
+        <a href="/job_listing">Back to Job Listings</a>
+    </div>
+
+</body>
+</html>

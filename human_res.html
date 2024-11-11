@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Resource Jobs</title>
+</head>
+<body>
+    <h1>List of Human Resource Jobs</h1>
+    {% if jobs %}
+        {% for job in jobs %}
+        <h4>Job Title: {{ job[0] }}</h4>
+        <h4>Location: {{ job[1] }}</h4>
+        <h4>Salary: {{ job[2] }}</h4>
+        <h4>Company Name: {{ job[3] }}</h4>
+        <p>{{ job[4] }}</p>
+        
+        <a href="/apply/{{ job[0] }}"><button>Apply</button></a>
+            <hr> <!-- Optional separator for readability -->
+        {% endfor %}
+    {% else %}
+        <p>There are currently no Human Resource job listings available.</p>
+    {% endif %}
+</body>
+</html>
